@@ -4,22 +4,31 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import HomeScreen from './screens/HomeScreen';
 import OffersScreen from './screens/OffersScreen';
+import MenuScreen from './screens/MenuScreen';
+import AccountScreen from './screens/AccountScreen';
 
 const MainNavigator = createStackNavigator({
   Home: { screen: HomeScreen },
-  Offers: { screen: OffersScreen }
+  Offers: { screen: OffersScreen },
+  Menu: { screen: MenuScreen },
+  Account: { screen: AccountScreen }
+},
+{
+  headerLayoutPreset: 'center'
 },
 {
   defaultNavigationOptions: {
+    headerLeft: null,
     headerTintColor: '#FFf',
     headerStyle: {
       elevation: 0,
       shadowOpacity: 0,
-      backgroundColor: '#3498DB',
-      height: 55
+      backgroundColor: '#fff',
+      height: 60,
     },
     headerTitleStyle: {
-      color: "#FFF"
+      color: '#192A56',
+      fontWeight: 'bold'
     }
   }
 });
